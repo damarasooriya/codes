@@ -22,14 +22,14 @@ drive.mount('/content/drive') </p>
   <h2> YT-DLP playlist download </h2>
     <p>yt-dlp -i -f "bestvideo[height<=720]+bestaudio/best" --merge-output-format mp4 "YOUTUBE_LINK_HERE" -P "SELECT_PATH_IN_COMP" -o "%(playlist_index)s - %(title)s.%(ext)s"</p>
   <br>
-  <h2> File merging </h2>
+  <h2> YT-DLP live stram download </h2>
     <p>yt-dlp -f "bv*[ext=mp4][height<=720]+ba[ext=m4a]/b[ext=mp4][height<=720]" --live-from-start --downloader ffmpeg --downloader-args "ffmpeg:-t 04:53:15" "YOUTUBE_LINK_HERE"</p>
   <br>
-  <h2> Colab direct link download to Drive </h2>
-    <p>To merge- ffmpeg -i raw_video.mp4 -i raw_audio.mp4 -c copy -map 0:v:0 -map 1:a:0 Final_video.mp4</p>
+  <h2> File merging </h2>
+    <p>ffmpeg -i raw_video.mp4 -i raw_audio.mp4 -c copy -map 0:v:0 -map 1:a:0 Downloaded_video.mp4</p>
   <br>
   <h2> To slice merge </h2>
-    <p>ffmpeg -i Final_SFT_Class.mp4 -t 04:53:15 -c copy SFT_Target_Class.mp4</p><br>
+    <p>ffmpeg -i Downloaded_video.mp4 -t 04:53:15 -c copy Final_video.mp4</p><br>
     <p>  video file - raw_video.mp4</p><br>
     <p>  audio file -  raw_audio.mp4</p>
 
