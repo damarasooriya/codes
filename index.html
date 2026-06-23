@@ -4,6 +4,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <style>
     body{color: White; 
         background-color: #121212;
@@ -13,24 +16,23 @@
 <body>
 
   <h2> Colab mount Google Drive </h2>
-    <p> from google.colab import drive
-drive.mount('/content/drive') </p>
+    <p style="font-family: JetBrains Mono"> from google.colab import drive <br>drive.mount('/content/drive') </p>
   <br>
   <h2> Colab direct link download to Drive </h2>
-    <p>!wget -P "/content/drive/My Drive/" "YOUR_DIRECT_DOWNLOAD_LINK_HERE"</p>
+    <p style="font-family: JetBrains Mono">!wget -P "/content/drive/My Drive/" "YOUR_DIRECT_DOWNLOAD_LINK_HERE"</p>
   <br>
   <h2> YT-DLP playlist download </h2>
-    <p>yt-dlp -i -f "bestvideo[height<=720]+bestaudio/best" --merge-output-format mp4 "YOUTUBE_LINK_HERE" -P "SELECT_PATH_IN_COMP" -o "%(playlist_index)s - %(title)s.%(ext)s"</p>
+    <p style="font-family: JetBrains Mono">yt-dlp -i -f "bestvideo[height<=720]+bestaudio/best" --merge-output-format mp4 "YOUTUBE_LINK_HERE" -P "SELECT_PATH_IN_COMP" -o "%(playlist_index)s - %(title)s.%(ext)s"</p>
   <br>
   <h2> YT-DLP live stram download </h2>
-    <p>yt-dlp -f "bv*[ext=mp4][height<=720]+ba[ext=m4a]/b[ext=mp4][height<=720]" --live-from-start --downloader ffmpeg --downloader-args "ffmpeg:-t 04:53:15" "YOUTUBE_LINK_HERE"</p>
+    <p style="font-family: JetBrains Mono">yt-dlp -f "bv*[ext=mp4][height<=720]+ba[ext=m4a]/b[ext=mp4][height<=720]" --live-from-start --downloader ffmpeg --downloader-args "ffmpeg:-t 04:53:15" "YOUTUBE_LINK_HERE"</p>
   <br>
   <h2> File merging </h2>
-    <p>ffmpeg -i raw_video.mp4 -i raw_audio.mp4 -c copy -map 0:v:0 -map 1:a:0 Downloaded_video.mp4</p>
+    <p style="font-family: JetBrains Mono">ffmpeg -i raw_video.mp4 -i raw_audio.mp4 -c copy -map 0:v:0 -map 1:a:0 Downloaded_video.mp4</p>
   <br>
   <h2> To slice merge </h2>
-    <p>ffmpeg -i Downloaded_video.mp4 -t 04:53:15 -c copy Final_video.mp4</p><br>
-    <p>  video file - raw_video.mp4<br>
+    <p style="font-family: JetBrains Mono">ffmpeg -i Downloaded_video.mp4 -t 04:53:15 -c copy Final_video.mp4</p><br>
+    <p style="font-family: JetBrains Mono">  video file - raw_video.mp4<br>
       audio file -  raw_audio.mp4</p>
 
 </body>
